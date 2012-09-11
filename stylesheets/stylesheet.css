@@ -429,3 +429,11 @@ Small Device Styles
   }
 
 }
+
+#form {
+	border:1px solid #DDD;
+	background-color:#FFF;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
