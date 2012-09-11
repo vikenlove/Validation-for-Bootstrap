@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Validation-for-bootstrap : 基于Bootstrap的jQuery表单验证插件" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Validation-for-bootstrap</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/FateSheep/Validation-for-Bootstrap">View on GitHub</a>
+
+          <h1 id="project_title">Validation-for-bootstrap</h1>
+          <h2 id="project_tagline">基于Bootstrap的jQuery表单验证插件</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/FateSheep/Validation-for-Bootstrap/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/FateSheep/Validation-for-Bootstrap/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>首先需要引入 jQuery 和 Bootstrap 库，然后在Js代码中加入下面一行代码。</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#form'</span><span class="p">).</span><span class="nx">validation</span><span class="p">();</span>
+</pre></div>
+
+<p><code>$('#form')</code> 为jQuery选中你需要验证的 dom 元素，最后只需要在html代码中指定相关的属性即可。</p>
+
+<div class="highlight"><pre><span class="o">&lt;</span><span class="nx">form</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"form-horizontal"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"control-group"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">label</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"control-label"</span> <span class="k">for</span><span class="o">=</span><span class="s2">"inputEmail"</span><span class="o">&gt;</span><span class="err">邮箱</span><span class="o">&lt;</span><span class="err">/label&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"controls"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"inputEmail"</span> <span class="nx">check</span><span class="o">-</span><span class="nx">type</span><span class="o">=</span><span class="s2">"mail"</span> <span class="nx">mail</span><span class="o">-</span><span class="nx">message</span><span class="o">=</span><span class="s2">"邮箱格式不正确！"</span> <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"control-group"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">label</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"control-label"</span> <span class="k">for</span><span class="o">=</span><span class="s2">"inputPassword"</span><span class="o">&gt;</span><span class="err">密码</span><span class="o">&lt;</span><span class="err">/label&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"controls"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"password"</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"inputPassword"</span> <span class="nx">check</span><span class="o">-</span><span class="nx">type</span><span class="o">=</span><span class="s2">"required"</span> <span class="nx">required</span><span class="o">-</span><span class="nx">message</span><span class="o">=</span><span class="s2">"密码不能为空！"</span> <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"control-group"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"controls"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"submit"</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"btn"</span><span class="o">&gt;</span><span class="err">登录</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="o">&lt;</span><span class="err">/form&gt;</span>
+</pre></div>
+
+<p>其中 check-type 为需要验证的规则，可以绑定多个规则，之间用空格隔开。</p>
+
+<p>其中 required-message 为验证为通过显示的信息，在这里 required-message 的'-'之前为前面定义的验证规则名称。</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Validation-for-bootstrap maintained by <a href="https://github.com/FateSheep">FateSheep</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
